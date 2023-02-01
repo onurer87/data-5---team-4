@@ -10,6 +10,17 @@
 
 -- All years are calculated in one table. if needed WHERE comment @ line 24 can be uncommented
 
+--Getting annual sales amounts
+SELECT strftime('%Y', o.OrderDate) as 'Year', 
+       Round(Sum(od.UnitPrice*od.Quantity*(1-od.Discount)),0) as 'Sales Amount' 
+FROM Orders o
+JOIN "Order Details" od ON o.OrderID=od.OrderID
+GROUP BY strftime('%Y', o.OrderDate)
+ORDER BY strftime('%Y', o.OrderDate);
+
+
+
+-- All years are calculated in one table. if needed WHERE comment @ line 24 can be uncommented
 with country_category AS (SELECT strftime('%Y', o.OrderDate) as 'Year',Sum( od.UnitPrice*od.Quantity*(1-od.Discount)) as 'Sales Amount',c.Country as "Country", 
 					       CASE when Sum(od.UnitPrice*od.Quantity*(1-od.Discount)) < 6500 then "Low"
 					       		when Sum(od.UnitPrice*od.Quantity*(1-od.Discount)) >= 6500 AND Sum(od.UnitPrice*od.Quantity*(1-od.Discount)) < 14300 THEN "Medium"
@@ -22,4 +33,4 @@ with country_category AS (SELECT strftime('%Y', o.OrderDate) as 'Year',Sum( od.U
 SELECT cc.'Year', round(SUM(cc."Sales Amount"),0) as "Category Sum", cc."Category" ||" ("|| GROUP_Concat(DISTINCT cc."Country")||")" as "Country Category"
 FROM country_category cc
 --WHERE cc.'Year'='2016'
-Group by cc.'Year',cc."Category"
+Group by cc.'Year',cc."Category";
