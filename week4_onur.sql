@@ -11,12 +11,12 @@ ORDER BY "Total of Territories" DESC;
 
 --Task2
 SELECT e.FirstName || " " || e.LastName as "Employee Name",
-       round(Sum(od.UnitPrice*od.Quantity*(1-od.Discount)),0) as "Sales Amount"
+       '$'||printf("%,d",Sum(od.UnitPrice*od.Quantity*(1-od.Discount))) as "Sales Amount"
 FROM Employees e
 JOIN Orders o on e.EmployeeID= o.EmployeeID
 JOIN "Order Details" od on o.OrderID=od.OrderID
 GROUP by "Employee Name"
-Order by "Sales Amount" DESC
+Order by "Sales Amount" DESC;
 
 
 --Task3
