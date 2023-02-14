@@ -3,7 +3,7 @@
 -- 2- generate a report for employee's performance according to sales amount and order them
 -- 3- for low-sales regions what is the shipped category there?
 
-
+
 --Task 1
 SELECT e.FirstName || &quot; &quot; || e.LastName as &quot;Employee Name&quot;, 
 Count(DISTINCT et.TerritoryID) as &quot;Total numbers of Territories&quot;,
@@ -27,13 +27,7 @@ FROM Employees e
 JOIN Orders o on e.EmployeeID= o.EmployeeID
 JOIN &quot;Order Details&quot; od on o.OrderID=od.OrderID
 GROUP by &quot;Employee Name&quot;
-ORDER by &quot;Sales Amount&quot; DESC;</sql><sql name="Wk 4b">-- tasks for this week :
--- 1-generate a report for the number of territories each employee responsible for
--- 2- generate a report for employee's performance according to sales amount and order them
--- 3- for low-sales regions what is the shipped category there?
-
-
-
+ORDER by &quot;Sales Amount&quot; DESC;</sql><sql name="Wk 4b">--Task 3
 
 with Countries AS (SELECT c.Country as &quot;Country&quot;,Sum( od.UnitPrice*od.Quantity*(1-od.Discount)) as 'Sales Amount', 
 					       CASE when Sum(od.UnitPrice*od.Quantity*(1-od.Discount)) &lt; 19500 then &quot;Low&quot;
@@ -53,4 +47,4 @@ JOIN Orders as o ON c.CustomerID = o.CustomerID
 JOIN &quot;Order Details&quot; as od on o.OrderID = od.OrderID
 JOIN Products as p ON od.ProductID = p.ProductID
 JOIN Categories as ca ON p.CategoryID = ca.CategoryID
-GROUP by co.Country;</sql><current_tab id="0"/></tab_sql></sqlb_project>
+GROUP by co.Country;</sql><current_tab id="1"/></tab_sql></sqlb_project>
