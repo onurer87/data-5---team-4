@@ -40,3 +40,17 @@ JOIN "Order Details" as od on o.OrderID = od.OrderID
 JOIN Products as p ON od.ProductID = p.ProductID
 JOIN Categories as ca ON p.CategoryID = ca.CategoryID
 GROUP by co.Country;
+
+--Getting the "Low-Category" countries to validate above query
+SELECT c.Country as "Country",Sum( od.UnitPrice*od.Quantity*(1-od.Discount)) as 'Sales Amount', 
+					       CASE when Sum(od.UnitPrice*od.Quantity*(1-od.Discount)) < 19500 then "Low"
+					       		when Sum(od.UnitPrice*od.Quantity*(1-od.Discount)) >= 19500 AND Sum(od.UnitPrice*od.Quantity*(1-od.Discount)) < 42900 THEN "Medium"
+					       		else "High"
+					       end  as "Category"
+					       FROM Orders o
+					       		JOIN "Order Details" od ON o.OrderID=od.OrderID
+								JOIN Customers c On o.CustomerID =c.CustomerID
+							Group BY c.Country
+							HAVING "Category"= "Low"
+							Order by "Sales Amount" DESC;
+
