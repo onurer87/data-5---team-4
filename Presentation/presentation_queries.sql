@@ -78,9 +78,9 @@ with Countries AS (SELECT c.Country as "Country",--Sum( od.UnitPrice*od.Quantity
 							HAVING "Category"= "Low"-- or "Category"= "High"
 							Order by "Sales Amount" DESC)
 SELECT ca.CategoryName as "Product Categories", 
-        round(avg(Julianday(o.RequiredDate)-Julianday(o.OrderDate)),1) as "Required Delivery Time", 
-        round(avg(Julianday(o.ShippedDate)-Julianday(o.OrderDate)),1) as "Shippment Time",
-        round(avg(julianday(o.RequiredDate)-Julianday(o.ShippedDate)),1) as "Deviation"
+        round(avg(Julianday(o.RequiredDate)-Julianday(o.OrderDate)),1) as "Avg Deadline", 
+        round(avg(Julianday(o.ShippedDate)-Julianday(o.OrderDate)),1) as "Avg Procurement Time",
+        round(avg(julianday(o.RequiredDate)-Julianday(o.ShippedDate)),1) as "Avg Delivery Time Left"
 FROM Categories as ca
 JOIN Products as p on ca.CategoryID = p.CategoryID
 JOIN "Order Details" as od on p.ProductID=od.ProductID
@@ -102,9 +102,9 @@ with Countries AS (SELECT c.Country as "Country",--Sum( od.UnitPrice*od.Quantity
 							HAVING "Category"= "High" --or "Category" = "Low"
 							Order by "Sales Amount" DESC)
 SELECT ca.CategoryName as "Product Categories", --co.Category as "Sales Category",
-        round(avg(Julianday(o.RequiredDate)-Julianday(o.OrderDate)),1) as "Required Delivery Time", 
-        round(avg(Julianday(o.ShippedDate)-Julianday(o.OrderDate)),1) as "Shippment Time",
-        round(avg(julianday(o.RequiredDate)-Julianday(o.ShippedDate)),1) as "Deviation"
+        round(avg(Julianday(o.RequiredDate)-Julianday(o.OrderDate)),1) as "Avg Deadline", 
+        round(avg(Julianday(o.ShippedDate)-Julianday(o.OrderDate)),1) as "Avg Procurement Time",
+        round(avg(julianday(o.RequiredDate)-Julianday(o.ShippedDate)),1) as "Avg Delivery Time Left"
 FROM Categories as ca
 JOIN Products as p on ca.CategoryID = p.CategoryID
 JOIN "Order Details" as od on p.ProductID=od.ProductID
@@ -161,7 +161,9 @@ with Countries AS (SELECT c.Country as "Country",--Sum( od.UnitPrice*od.Quantity
 							Group BY c.Country
 							HAVING "Category"= "Low" or "Category"= "High"
 							Order by "Sales Amount" DESC)
-select co.Category as "Sales Category",co.Country as "Country",count(o.OrderID) as "# of Delayed Orders","("|| GROUP_Concat(DISTINCT o.OrderID)||")" as "Order ID", round(avg(julianday(o.RequiredDate)-julianday(o.ShippedDate)),2) as "AVG Delay(days)"
+select co.Category as "Sales Category",co.Country as "Country",count(o.OrderID) as "# of Delayed Orders",
+	"("|| GROUP_Concat(DISTINCT o.OrderID)||")" as "Order ID", 
+	round(avg(julianday(o.RequiredDate)-julianday(o.ShippedDate)),2) as "AVG Delay(days)"
 From Orders as o
 JOIN Customers as cu on o.CustomerID=cu.CustomerID
 JOIN Countries as co on co.Country=cu.Country
