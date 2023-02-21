@@ -2,6 +2,7 @@
 This repo is for Develhope/Data5_team4
 
 Task for week_5:
+----------------------------------------------
 1- find the average shipping date for each category for low sales region and compare it with the Required date of the order (using shipped date - order date - required date)
 2- find the effects of the discount on the low sales region by comparing it with high sales regions discount
 3-prepare for final presentation
