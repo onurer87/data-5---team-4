@@ -1,7 +1,9 @@
 --SQLite
 --Week_1
 
-SELECT c.Country  as 'Country', count(DISTINCT c1.CategoryName) as "# of Categories",GROUP_CONCAT(DISTINCT c1.CategoryName) as 'Categories'
+SELECT c.Country  as 'Country', 
+	count(DISTINCT c1.CategoryName) as "# of Categories",
+	GROUP_CONCAT(DISTINCT c1.CategoryName) as 'Categories' 
 From Categories c1
 join Customers c on c.CustomerID =o.customerID
 join orders o on o.OrderID =od.orderID
@@ -162,7 +164,7 @@ with Countries AS (SELECT c.Country as "Country",--Sum( od.UnitPrice*od.Quantity
 							HAVING "Category"= "Low" or "Category"= "High"
 							Order by "Sales Amount" DESC)
 select co.Category as "Sales Category",co.Country as "Country",count(o.OrderID) as "# of Delayed Orders",
-	"("|| GROUP_Concat(DISTINCT o.OrderID)||")" as "Order ID", 
+	--"("|| GROUP_Concat(DISTINCT o.OrderID)||")" as "Order ID", 
 	round(avg(julianday(o.RequiredDate)-julianday(o.ShippedDate)),2) as "AVG Delay(days)"
 From Orders as o
 JOIN Customers as cu on o.CustomerID=cu.CustomerID
