@@ -1,0 +1,19 @@
+Product Categories;Avg Deadline(High);Avg Procurement Time(High);Avg Delivery Time Left(High);Avg Deadline(Low);Avg Procurement Time(Low);Avg Delivery Time Left(Low)
+Beverages;28;8,7;19,3;26,9;17,7;9,1
+Condiments;28,4;8,6;19,9;28,9;15,6;13,3
+Confections;28,6;8,9;19,8;27,7;17,9;9,7
+Dairy Products;27;8,6;18,3;28,8;21,2;7,6
+Grains/Cereals;28,1;8,3;19,8;27,4;17,9;9,5
+Meat/Poultry;27,6;8,6;18,8;28;15,7;12,3
+Produce;28,3;7,5;20,8;26,6;16,6;9,9
+Seafood;27,9;7,7;20,2;27,6;15,5;12
+;;;;;;
+Product Categories;;;;;;
+Beverages;;;;;;
+Condiments;;;;;;
+Confections;;;;;;
+Dairy Products;;;;;;
+Grains/Cereals;;;;;;
+Meat/Poultry;;;;;;
+Produce;;;;;;
+Seafood;;;;;;

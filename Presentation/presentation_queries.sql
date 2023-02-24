@@ -3,14 +3,13 @@
 
 SELECT c.Country  as 'Country', 
 	count(DISTINCT c1.CategoryName) as "# of Categories",
-	GROUP_CONCAT(DISTINCT c1.CategoryName) as 'Categories' 
+	GROUP_CONCAT(DISTINCT c1.CategoryName ) as 'Categories' 
 From Categories c1
 join Customers c on c.CustomerID =o.customerID
 join orders o on o.OrderID =od.orderID
 join "Order Details" od on od.ProductID =p.productID
 join Products p on p.CategoryID = c1.CategoryID 
 GROUP by c.Country;
-
 --Week_2
 
 --Getting annual sales amounts

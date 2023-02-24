@@ -1,0 +1,18 @@
+Sales Category;Country Name;Average Discount;Sales Amount
+High;Ireland;11.36%;$49,979
+Low;Portugal;9.5%;$11,472
+High;Sweden;7.06%;$54,495
+High;Austria;6.88%;$128,003
+High;Venezuela;6.69%;$56,810
+High;Brazil;6.65%;$106,925
+High;Canada;6.4%;$50,196
+High;Germany;6.31%;$230,284
+High;USA;5.95%;$245,584
+High;France;5.52%;$81,358
+Low;Italy;5.38%;$15,770
+Low;Finland;3.7%;$18,810
+Low;Spain;3.24%;$17,983
+High;UK;2.3%;$58,971
+Low;Argentina;0.0%;$8,119
+Low;Norway;0.0%;$5,735
+Low;Poland;0.0%;$3,531

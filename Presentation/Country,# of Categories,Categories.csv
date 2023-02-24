@@ -1,0 +1,130 @@
+Country;# of Categories;Categories
+Argentina;7;Produce,Confections,Seafood,Beverages,Dairy Products,Condiments,Grains/Cereals
+Austria;8;Beverages,Condiments,Dairy Products,Confections,Seafood,Produce,Grains/Cereals,Meat/Poultry
+Belgium;8;Confections,Dairy Products,Meat/Poultry,Produce,Beverages,Grains/Cereals,Condiments,Seafood
+Brazil;8;Seafood,Produce,Condiments,Dairy Products,Beverages,Confections,Meat/Poultry,Grains/Cereals
+Canada;8;Seafood,Grains/Cereals,Confections,Condiments,Meat/Poultry,Dairy Products,Beverages,Produce
+Denmark;8;Dairy Products,Beverages,Meat/Poultry,Condiments,Confections,Seafood,Produce,Grains/Cereals
+Finland;8;Dairy Products,Seafood,Beverages,Produce,Confections,Meat/Poultry,Grains/Cereals,Condiments
+France;8;Dairy Products,Grains/Cereals,Condiments,Meat/Poultry,Beverages,Confections,Seafood,Produce
+Germany;8;Produce,Seafood,Grains/Cereals,Confections,Beverages,Dairy Products,Meat/Poultry,Condiments
+Ireland;8;Beverages,Seafood,Dairy Products,Confections,Condiments,Grains/Cereals,Produce,Meat/Poultry
+Italy;8;Beverages,Dairy Products,Meat/Poultry,Confections,Condiments,Grains/Cereals,Seafood,Produce
+Mexico;8;Confections,Seafood,Beverages,Condiments,Dairy Products,Meat/Poultry,Produce,Grains/Cereals
+Norway;7;Beverages,Produce,Dairy Products,Meat/Poultry,Seafood,Confections,Condiments
+Poland;7;Dairy Products,Seafood,Beverages,Meat/Poultry,Confections,Produce,Condiments
+Portugal;8;Dairy Products,Condiments,Confections,Beverages,Meat/Poultry,Produce,Grains/Cereals,Seafood
+Spain;8;Confections,Beverages,Seafood,Grains/Cereals,Condiments,Meat/Poultry,Dairy Products,Produce
+Sweden;8;Beverages,Seafood,Condiments,Dairy Products,Meat/Poultry,Confections,Produce,Grains/Cereals
+Switzerland;8;Beverages,Meat/Poultry,Produce,Confections,Seafood,Dairy Products,Grains/Cereals,Condiments
+UK;8;Condiments,Grains/Cereals,Beverages,Seafood,Confections,Dairy Products,Produce,Meat/Poultry
+USA;8;Condiments,Produce,Grains/Cereals,Dairy Products,Confections,Beverages,Meat/Poultry,Seafood
+Venezuela;8;Confections,Beverages,Condiments,Meat/Poultry,Dairy Products,Seafood,Produce,Grains/Cereals
+;;
+Year,Sales Amount;;
+"2016,""$208,083""";;
+"2017,""$617,085""";;
+"2018,""$440,623""";;
+;;
+Year,Category Sum,Country Category;;
+"2016,""$136,635"",""High (Austria,Brazil,France,Germany,USA)""";;
+"2016,""$29,007"",""Low (Belgium,Denmark,Finland,Italy,Mexico,Norway,Poland,Portugal,Spain,Switzerland)""";;
+"2016,""$42,441"",""Medium (Canada,Ireland,Sweden,UK,Venezuela)""";;
+"2017,""$567,089"",""High (Austria,Brazil,Canada,Denmark,France,Germany,Ireland,Mexico,Sweden,Switzerland,UK,USA,Venezuela)""";;
+"2017,""$10,198"",""Low (Argentina,Norway,Poland,Portugal)""";;
+"2017,""$39,796"",""Medium (Belgium,Finland,Italy,Spain)""";;
+"2018,""$378,924"",""High (Austria,Belgium,Brazil,France,Germany,Ireland,Sweden,UK,USA,Venezuela)""";;
+"2018,""$26,154"",""Low (Argentina,Denmark,Finland,Mexico,Norway,Poland,Portugal)""";;
+"2018,""$35,545"",""Medium (Canada,Italy,Spain,Switzerland)""";;
+;;
+ProductName,Quantity;;
+"Camembert Pierrot,""1,577""";;
+"Raclette Courdavault,""1,496""";;
+"Gorgonzola Telino,""1,397""";;
+;;
+Employee Name,Total Territories,Total Sales,Sales per Territory,Territories;;
+"Nancy Davolio,2,""$192,108"",""$96,054"",""(Wilton,Neward)""";;
+"Margaret Peacock,3,""$232,891"",""$77,630"",""(Rockville,Greensboro,Cary)""";;
+"Janet Leverling,4,""$202,813"",""$50,703"",""(Atlanta,Savannah,Orlando,Tampa)""";;
+"Laura Callahan,4,""$126,862"",""$31,715"",""(Philadelphia,Beachwood,Findlay,Racine)""";;
+"Andrew Fuller,7,""$166,538"",""$23,791"",""(Westboro,Bedford,Georgetow,Boston,Cambridge,Braintree,Louisville)""";;
+"Michael Suyama,5,""$73,913"",""$14,782"",""(Phoenix,Scottsdale,Bellevue,Redmond,Seattle)""";;
+"Robert King,10,""$124,568"",""$12,456"",""(Hoffman Estates,Chicago,Denver,Colorado Springs,Santa Monica,Menlo Park,San Francisco,Campbell,Santa Clara,Santa Cruz)""";;
+"Anne Dodsworth,7,""$77,308"",""$11,044"",""(Hollis,Portsmouth,Southfield,Troy,Bloomfield Hills,Roseville,Minneapolis)""";;
+"Steven Buchanan,7,""$68,792"",""$9,827"",""(Providence,Morristown,Edison,New York,New York,Mellvile,Fairport)""";;
+;;
+Product Categories,Avg Deadline,Avg Procurement Time,Avg Delivery Time Left;;
+Beverages,26.9,17.7,9.1;;
+Condiments,28.9,15.6,13.3;;
+Confections,27.7,17.9,9.7;;
+Dairy Products,28.8,21.2,7.6;;
+Grains/Cereals,27.4,17.9,9.5;;
+Meat/Poultry,28.0,15.7,12.3;;
+Produce,26.6,16.6,9.9;;
+Seafood,27.6,15.5,12.0;;
+;;
+Product Categories,Avg Deadline,Avg Procurement Time,Avg Delivery Time Left;;
+Beverages,28.0,8.7,19.3;;
+Condiments,28.4,8.6,19.9;;
+Confections,28.6,8.9,19.8;;
+Dairy Products,27.0,8.6,18.3;;
+Grains/Cereals,28.1,8.3,19.8;;
+Meat/Poultry,27.6,8.6,18.8;;
+Produce,28.3,7.5,20.8;;
+Seafood,27.9,7.7,20.2;;
+;;
+Country,Category;;
+Argentina,Low;;
+Finland,Low;;
+Italy,Low;;
+Norway,Low;;
+Poland,Low;;
+Portugal,Low;;
+Spain,Low;;
+Austria,High;;
+Brazil,High;;
+Canada,High;;
+France,High;;
+Germany,High;;
+Ireland,High;;
+Sweden,High;;
+UK,High;;
+USA,High;;
+Venezuela,High;;
+;;
+Sales Category,Country Name,Average Discount,Sales Amount;;
+"High,Ireland,11.36%,""$49,979""";;
+"Low,Portugal,9.5%,""$11,472""";;
+"High,Sweden,7.06%,""$54,495""";;
+"High,Austria,6.88%,""$128,003""";;
+"High,Venezuela,6.69%,""$56,810""";;
+"High,Brazil,6.65%,""$106,925""";;
+"High,Canada,6.4%,""$50,196""";;
+"High,Germany,6.31%,""$230,284""";;
+"High,USA,5.95%,""$245,584""";;
+"High,France,5.52%,""$81,358""";;
+"Low,Italy,5.38%,""$15,770""";;
+"Low,Finland,3.7%,""$18,810""";;
+"Low,Spain,3.24%,""$17,983""";;
+"High,UK,2.3%,""$58,971""";;
+"Low,Argentina,0.0%,""$8,119""";;
+"Low,Norway,0.0%,""$5,735""";;
+"Low,Poland,0.0%,""$3,531""";;
+;;
+Sales Category,Country,# of Delayed Orders,AVG Delay(days);;
+Low,Argentina,1,-8.0;;
+Low,Finland,9,-16.22;;
+Low,Italy,15,-8.87;;
+Low,Norway,6,-12.17;;
+Low,Poland,6,-15.0;;
+Low,Portugal,1,-1.0;;
+Low,Spain,1,-17.0;;
+High,Austria,1,-7.0;;
+High,Brazil,3,-15.67;;
+High,France,3,-8.67;;
+High,Germany,4,-7.75;;
+High,Ireland,3,-5.0;;
+High,Sweden,3,-3.33;;
+High,UK,4,-5.75;;
+High,USA,7,-4.43;;
+High,Venezuela,2,-6.0;;

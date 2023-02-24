@@ -1,0 +1,17 @@
+Sales Category,Country,# of Delayed Orders,AVG Delay(days)
+Low,Argentina,1,-8.0
+Low,Finland,9,-16.22
+Low,Italy,15,-8.87
+Low,Norway,6,-12.17
+Low,Poland,6,-15.0
+Low,Portugal,1,-1.0
+Low,Spain,1,-17.0
+High,Austria,1,-7.0
+High,Brazil,3,-15.67
+High,France,3,-8.67
+High,Germany,4,-7.75
+High,Ireland,3,-5.0
+High,Sweden,3,-3.33
+High,UK,4,-5.75
+High,USA,7,-4.43
+High,Venezuela,2,-6.0
